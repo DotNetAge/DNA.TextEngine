@@ -1,10 +1,7 @@
 ﻿//  Copyright (c) 2011 Ray Liang (http://www.dotnetage.com)
-//  Licensed MIT: http://www.opensource.org/licenses/mit-license.php
+//  Licensed MIT: http://www.dotnetage.com/home/en-US/the-mit-license-mit.html
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace DNA.Text

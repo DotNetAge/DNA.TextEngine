@@ -1,4 +1,4 @@
-﻿//  Copyright (c) 2011 Ray Liang (http://www.dotnetage.com)
+﻿//  Copyright (c) 2014 Ray Liang (http://www.dotnetage.com)
 //  Licensed MIT: http://www.opensource.org/licenses/mit-license.php
 
 using System.Reflection;
@@ -10,10 +10,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("http://www.dotnetage.com")]
 [assembly: AssemblyProduct("DotNetAge TextEngine")]
-[assembly: AssemblyCopyright("Copyright ©  2011 Ray Liang (http://www.dotnetage.com)")]
+[assembly: AssemblyCopyright("Copyright ©  2011 - 2014 Ray Liang (http://www.dotnetage.com)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
 [assembly: Guid("358633d6-4859-4754-97d1-c20c1a6d56ef")]
-[assembly: AssemblyVersion("2.1.0.*")]
-[assembly: AssemblyFileVersion("2.1.0.0")]
+[assembly: AssemblyVersion("2.1.1.*")]
+[assembly: AssemblyFileVersion("2.1.1.0")]

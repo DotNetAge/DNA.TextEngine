@@ -1,5 +1,5 @@
 ﻿//  Copyright (c) 2011 Ray Liang (http://www.dotnetage.com)
-//  Licensed MIT: http://www.opensource.org/licenses/mit-license.php
+//  Licensed MIT: http://www.dotnetage.com/home/en-US/the-mit-license-mit.html
 
 using System;
 using System.Web.Mvc;
@@ -106,6 +106,17 @@ language.Equals("jscript", StringComparison.OrdinalIgnoreCase))
                 .AddFormat(formatter)
                 .Format();
             return builder.ToHtmlString();
+        }
+
+        public static MvcHtmlString Markdown(string md) 
+        {
+            if (!string.IsNullOrEmpty(md))
+            {
+                var _markdown = new anrControls.Markdown();
+                return MvcHtmlString.Create(_markdown.Transform(md));
+            }
+            else
+                return MvcHtmlString.Empty;
         }
     }
 }

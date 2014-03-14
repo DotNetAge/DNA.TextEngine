@@ -1,5 +1,5 @@
 ﻿//  Copyright (c) 2011 Ray Liang (http://www.dotnetage.com)
-//  Licensed MIT: http://www.opensource.org/licenses/mit-license.php
+//  Licensed MIT: http://www.dotnetage.com/home/en-US/the-mit-license-mit.html
 
 using System;
 using System.Collections.Generic;
@@ -11,11 +11,12 @@ using System.Text.RegularExpressions;
 namespace DNA.Text
 {
     /// <summary>
-    /// Presents the text formatter use to replace the match pattern.
+    /// Represents a text formatter use to replace the match pattern.
     /// </summary>
     public class ReplacementTextFormatter :ExplicitlyFormatter //  ITextFormatter
     {
         private Regex _regex;
+
         public bool IsExplicitly { get; set; }
 
         /// <summary>

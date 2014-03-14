@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\DNA.Text.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,28 +36,38 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\DNA.Text.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Sign.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSharpFormat, Version=2.5.3417.41446, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>assemblyReferences\CSharpFormat.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bb\BBCodeFormatter.cs" />
     <Compile Include="bb\BBFormatterContainer.cs" />
     <Compile Include="CodeFormatter.cs" />
+    <Compile Include="thirdParty\CSharpFormat\CLikeFormat.cs" />
+    <Compile Include="thirdParty\CSharpFormat\CodeFormat.cs" />
+    <Compile Include="thirdParty\CSharpFormat\CSharpFormat.cs" />
+    <Compile Include="thirdParty\CSharpFormat\HtmlFormat.cs" />
+    <Compile Include="thirdParty\CSharpFormat\JavaScriptFormat.cs" />
+    <Compile Include="thirdParty\CSharpFormat\MshFormat.cs" />
+    <Compile Include="thirdParty\CSharpFormat\SourceFormat.cs" />
+    <Compile Include="thirdParty\CSharpFormat\TsqlFormat.cs" />
+    <Compile Include="thirdParty\CSharpFormat\VisualBasicFormat.cs" />
     <Compile Include="ExplicitlyFormatter.cs" />
     <Compile Include="FormatterContainer.cs" />
+    <Compile Include="thirdParty\Markdown.cs" />
     <Compile Include="ReplacementTextFormatter.cs" />
     <Compile Include="ITextFormatter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,7 +83,11 @@
     <Compile Include="wiki\WikiFormatterContainer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assemblyReferences\CSharpFormat.dll" />
+    <None Include="changelog.md" />
+    <None Include="Sign.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="thirdParty\CSharpFormat\csharp.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
